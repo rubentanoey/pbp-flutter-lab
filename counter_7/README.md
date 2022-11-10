@@ -19,7 +19,7 @@
 `SetState()` adalah suatu fungsi yang akan melakukan pembangunan ulang widget-widget yang ada karena suatu kondisi tertentu. Seperti perubahan ketika nilai _counter dari 0 -> 1, akan membuat widget button decrement muncul. Tanpa `setState()`, tidak ada perubahan pada tampilan dari aplikasi tersebut.
 
 ## Perbedaan Const dan Final
-`FInal` memiliki maksud bahwa variabel yang ada bersifat single-assignment. Ketika dimasukkan suatu value, value yang ada tidak dapat diganti atau di-replace. Sebaliknya, `const` dapat berupa objek yang ditampilkan dari data yang diperoleh saat *compile time*.
+`final` memiliki maksud bahwa variabel yang ada bersifat single-assignment. Ketika dimasukkan suatu value, value yang ada tidak dapat diganti atau di-replace. Sebaliknya, `const` dapat berupa objek yang ditampilkan dari data yang diperoleh saat *compile time*.
 
 ## Implemtasi
 - Membuat aplikasi baru counter_7
