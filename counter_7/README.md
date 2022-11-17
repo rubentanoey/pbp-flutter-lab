@@ -21,7 +21,7 @@
 ## Perbedaan Const dan Final
 `final` memiliki maksud bahwa variabel yang ada bersifat single-assignment. Ketika dimasukkan suatu value, value yang ada tidak dapat diganti atau di-replace. Sebaliknya, `const` dapat berupa objek yang ditampilkan dari data yang diperoleh saat *compile time*.
 
-## Implemtasi
+## Implementasi
 - Membuat aplikasi baru counter_7
     ```dart
         flutter create counter_7
@@ -78,7 +78,6 @@
 
 ## Perbedaan `Navigator.push` dan `Navigator.pushReplacement`
 `Navigator.push` merupakan widget yang dapat mengganti route (page) menjadi route selanjutnya. Secara default, `Navigator.push` akan membuat page selanjutnya ter-*store* ke dalam stack of routes atau pages. `Navigator.pushReplacement` mencegah hal tersebut terjadi. Apabila suatu page dilakukan `Navigator.pushReplacement`, maka stack sebelumnya diganti dengan stack saat ini. Berikut dokumentasinya
-![[Pasted image 20221117090311.png]]
 
 ## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
 - Navigator.pushReplacement: Widget untuk mengganti page (route) yang menggantikan posisi stack sebelumnya.
@@ -99,3 +98,32 @@
 Ada 2 *function* utama Navigator yang memicu perpindahan page. Pertama, `Navigator.push` membuat page pertama berpindah ke page sebelumnya. Page pertama akan masuk ke dalam `stack of pages`. Sebaliknya, `Navigator.pop` akan mengambil push terakhir pada `stack of pages`.
 
 ## Implementasi
+1. Membuat Bar Navigasi dengan nama file `nav_burger.dart`
+```dart
+...
+return Drawer(  
+  child: Column(  
+    children: [  
+      // Menambahkan clickable menu  
+      ListTile(  
+        title: const Text('counter_7'),  
+        onTap: () {  
+          // Route menu ke halaman utama  
+          Navigator.pushReplacement(  
+            context,  
+            MaterialPageRoute(  
+                builder: (context) => const MyHomePage(title: 'counter_7')),  
+          );
+...
+```
+
+2. Masukkan Bar Navigasi (Burger) ke dalam `main.dart`
+```dart
+...
+drawer: const NavBurger(),
+...
+```
+
+3. Buat objek BudgetProperty pada data_store.dart
+4. Buat page untuk input form pada add_budget.dart
+5. Buat page yang memunculkan data yang telah diimport pada budget_data.dart
