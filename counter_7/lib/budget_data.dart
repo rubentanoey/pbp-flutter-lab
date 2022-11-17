@@ -34,11 +34,13 @@ class _DataBudgetState extends State<BudgetData> {
                       subtitle: Text(stored.budget_list[index].nominal.toString()),
                       trailing: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             Text(stored.budget_list[index].jenisBudget),
                             Text(
                               stored.budget_list[index].date.toString(),
-                              style: const TextStyle(color: Colors.grey),
+                              style: const TextStyle(color: Colors.teal),
                             )
                           ]),
                     )),

@@ -48,7 +48,7 @@ class _AddBudgetState extends State<AddBudget> {
                                     padding: const EdgeInsets.all(8.0),
                                     child: TextFormField(
                                         decoration: InputDecoration(
-                                            hintText: "Beli Makan",
+                                            hintText: "Listrik November",
                                             labelText: "Judul",
                                             // Menambahkan circular border agar lebih rapi
                                             border: OutlineInputBorder(
@@ -81,18 +81,16 @@ class _AddBudgetState extends State<AddBudget> {
                                     padding: const EdgeInsets.all(8.0),
                                     child: TextFormField(
                                         decoration: InputDecoration(
-                                            hintText: "15000",
+                                            hintText: "120000",
                                             labelText: "Nominal",
-                                            // Menambahkan circular border agar lebih rapi
                                             border: OutlineInputBorder(
-                                                borderRadius: BorderRadius.circular(5.0),
+                                                borderRadius: BorderRadius.circular(8.0),
                                             ),
                                         ),
                                         keyboardType: TextInputType.number,
                                         inputFormatters: <TextInputFormatter>[
                                             FilteringTextInputFormatter.digitsOnly
                                         ],
-                                        // Menambahkan behavior saat nama diketik
                                         onChanged: (String? value) {
                                             setState(() {
                                                 if (value != '') {
@@ -147,9 +145,9 @@ class _AddBudgetState extends State<AddBudget> {
                                                 child: Text(items),
                                             );
                                         }).toList(),
-                                        onChanged: (String? newValue) {
+                                        onChanged: (String? jenis) {
                                             setState(() {
-                                                jenisBudget = newValue!;
+                                                jenisBudget = jenis!;
                                             });
                                         },
                                         hint: Container(
@@ -162,8 +160,8 @@ class _AddBudgetState extends State<AddBudget> {
                                         ),
                                     ),
                                 ),
-                                Align(
-                                    alignment: Alignment.bottomCenter,
+                                Padding(
+                                    padding: const EdgeInsets.all(8.0),
                                     child: TextButton(
                                         style: TextButton.styleFrom(
                                             backgroundColor: Colors.blue,
