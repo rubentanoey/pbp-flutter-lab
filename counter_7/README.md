@@ -1,4 +1,4 @@
-# Assignment 7: Implementasi Form dan Autentikasi dengan Django
+# Assignment 7: Elemen Dasar Flutter
 
 #### Nama    : Ruben Tanoey
 #### NPM     : 2106752445
@@ -69,3 +69,33 @@
               ),
     ...
     ```
+
+# Assignment 8: Flutter Form
+
+#### Nama    : Ruben Tanoey
+#### NPM     : 2106752445
+#### Kelas   : D
+
+## Perbedaan `Navigator.push` dan `Navigator.pushReplacement`
+`Navigator.push` merupakan widget yang dapat mengganti route (page) menjadi route selanjutnya. Secara default, `Navigator.push` akan membuat page selanjutnya ter-*store* ke dalam stack of routes atau pages. `Navigator.pushReplacement` mencegah hal tersebut terjadi. Apabila suatu page dilakukan `Navigator.pushReplacement`, maka stack sebelumnya diganti dengan stack saat ini. Berikut dokumentasinya
+![[Pasted image 20221117090311.png]]
+
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- Navigator.pushReplacement: Widget untuk mengganti page (route) yang menggantikan posisi stack sebelumnya.
+- Form: Widget untuk melakukan grouping dari form field widgets.
+- TextFormField: Widget berupa textfield
+- InputDecoration: Widget untuk mendekorasi textfield (placeholder, border, etc.)
+- ListTile: Widget untuk membuat list atas objek yang terbagi garis
+
+## Sebutkan jenis-jenis _event_ yang ada pada Flutter
+
+- onEnter: *Triggered* ketika mouse pointer memasuki widget yang ditentukan.
+- onExit: *Triggered* ketika mouse pointer keluar dari widget.
+- onHover: *Triggered* ketika mouse pointer berada di widget, tanpa mengeklik.
+- onClick: *Triggered* ketika mouse pointer mengeklik widget.
+
+## Jelaskan bagaimana cara kerja `Navigator` dalam "mengganti" halaman dari aplikasi Flutter.
+
+Ada 2 *function* utama Navigator yang memicu perpindahan page. Pertama, `Navigator.push` membuat page pertama berpindah ke page sebelumnya. Page pertama akan masuk ke dalam `stack of pages`. Sebaliknya, `Navigator.pop` akan mengambil push terakhir pada `stack of pages`.
+
+## Implementasi

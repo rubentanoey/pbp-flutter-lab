@@ -153,7 +153,7 @@ class _AddBudgetState extends State<AddBudget> {
                                             });
                                         },
                                         hint: Container(
-                                            width: 150, //and here
+                                            width: 180, //and here
                                             child: const Text(
                                                 "Pilih Jenis",
                                                 style: TextStyle(color: Colors.grey),
@@ -167,7 +167,7 @@ class _AddBudgetState extends State<AddBudget> {
                                     child: TextButton(
                                         style: TextButton.styleFrom(
                                             backgroundColor: Colors.blue,
-                                            padding: const EdgeInsets.all(15.0),
+                                            padding: const EdgeInsets.all(16.0),
                                             tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                                             alignment: Alignment.center),
                                         onPressed: () {
