@@ -128,7 +128,7 @@ drawer: const NavBurger(),
 4. Buat page untuk input form pada add_budget.dart
 5. Buat page yang memunculkan data yang telah diimport pada budget_data.dart
 
-# Assignment 9: # Integrasi Web Service pada Flutter
+# Assignment 9: Integrasi Web Service pada Flutter
 
 #### Nama    : Ruben Tanoey
 #### NPM     : 2106752445
