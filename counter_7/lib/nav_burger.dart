@@ -1,5 +1,6 @@
-import 'package:counter_7/add_budget.dart';
-import 'package:counter_7/budget_data.dart';
+import 'package:counter_7/pages/budget_adder.dart';
+import 'package:counter_7/pages/budget_data.dart';
+import 'package:counter_7/pages/mywatchlist_data.dart';
 import 'package:flutter/material.dart';
 import 'package:counter_7/main.dart';
 
@@ -40,7 +41,17 @@ class NavBurger extends StatelessWidget {
               // Route menu ke halaman data budget
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => const BudgetData()),
+                MaterialPageRoute(builder: (context) => const BudgetRoute()),
+              );
+            },
+          ),
+          ListTile(
+            title: const Text('My Watchlist'),
+            onTap: () {
+              // Route menu ke halaman data budget
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const MyWatchListRoute()),
               );
             },
           ),

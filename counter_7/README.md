@@ -127,3 +127,34 @@ drawer: const NavBurger(),
 3. Buat objek BudgetProperty pada data_store.dart
 4. Buat page untuk input form pada add_budget.dart
 5. Buat page yang memunculkan data yang telah diimport pada budget_data.dart
+
+# Assignment 9: # Integrasi Web Service pada Flutter
+
+#### Nama    : Ruben Tanoey
+#### NPM     : 2106752445
+#### Kelas   : D
+
+## Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+
+Ya, kita bisa melakukan pengambilan data JSON tanpa membuat model. Dengan membuat mapping yang dinamis, seperti `MyWatchList.fromJson(Map<String, dynamic> json)`, sebuah objek dengan key dan value. Sayangnya, langkah ini bukanlah *best practice* karena bisa saja ada field yang gagal diisi dan mengakibatkan error
+
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- DateFormat: Untuk melakukan formatting pada penanggalan
+- RoundedRectangleBorder: Untuk membuat border kotak pada suatu container
+- FutureBuilder: Widget yang dibentuk pada snapshot terakhir `future:`
+- ListView.builder: Widget scrollable yang dapat diisi dengan widget lainnya, misalnya ListTiles
+
+## Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+1. Pengambilan dilakukan dengan fetching dari suatu web yang menyediakan data json, dengan import `import 'package:http/http.dart' as http`.
+2. Kemudian buat method, misalnya `Future<List<MyWatchList>> getWatchList()` untuk melakukan parsing url dan fetching data dari url tersebut dan melakukan return list dari objek-objek yang diperoleh.
+3. Pada Route untuk menampilkan data, dibuatlah widget `FutureBuilder` dengan, misalnya, `future: getWatchList` untuk menerima data dan akan mereturn `ListView.builder` berisi data yang telah di-*retrieve* sebelumnya.
+
+## Implementasi Checklist
+1. Membuat Models dari MyWatchList dengan bantuan `https://app.quicktype.io/`.
+2. Membuat data getter, yaitu file `mywatchlist_webgetter.dart` untuk memperoleh data json dari web
+3. Membuat page yang mereturn data, yaitu file `mywatchlist_data` untuk menampilkan list dari MyWacthList yang telah di-*retrieve*.
+4. Menambahkan route `MYWatchList` pada Navigation Bar `NavBurger`
+5. Membuat Page yang menampilkan detail dari masing-masing set data, yaitu file `mywatchlist_detail`.
+6. Melakukan dekorasi pada route utama dengan memanfaatkan widget TextStyle, SizedBox, etc.
+7. Buat directory untuk mengelompokkan files, yaitu directory pages, models, dan utils.
+8. Lakukan Refactor sehingga semua link yang diimport agar mengalami perubahan secara otomatis.

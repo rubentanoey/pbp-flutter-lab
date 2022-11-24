@@ -1,8 +1,8 @@
-import 'package:counter_7/budget_data.dart';
+import 'package:counter_7/pages/budget_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:counter_7/nav_burger.dart';
-import 'data_store.dart' as globals;
+import '../models/budget_store.dart' as stored;
 
 class AddBudget extends StatefulWidget {
     const AddBudget({super.key});
@@ -21,11 +21,11 @@ class _AddBudgetState extends State<AddBudget> {
 
     onPressed(BuildContext context) {
         var data =
-        globals.BudgetProperty(judul: _judul!, nominal: nominal!, jenisBudget: jenisBudget!, date: date);
-        globals.budget_list.add(data);
+        stored.BudgetProperty(judul: _judul!, nominal: nominal!, jenisBudget: jenisBudget!, date: date);
+        stored.budget_list.add(data);
         Navigator.pushReplacement(
             context,
-            MaterialPageRoute(builder: (context) => const BudgetData()),
+            MaterialPageRoute(builder: (context) => const BudgetRoute()),
         );
     }
 

@@ -1,5 +1,5 @@
 library counter_7.globals;
-import 'package:counter_7/add_budget.dart';
+import 'package:counter_7/pages/budget_adder.dart';
 
 class BudgetProperty {
   late String judul;

@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:counter_7/main.dart';
-import 'package:counter_7/add_budget.dart';
+import 'package:counter_7/pages/budget_adder.dart';
 import 'package:counter_7/nav_burger.dart';
-import 'data_store.dart' as stored;
+import '../models/budget_store.dart' as stored;
 
-class BudgetData extends StatefulWidget {
-  const BudgetData({super.key});
+class BudgetRoute extends StatefulWidget {
+  const BudgetRoute({super.key});
 
   @override
-  State<BudgetData> createState() => _DataBudgetState();
+  State<BudgetRoute> createState() => _DataBudgetState();
 }
 
-class _DataBudgetState extends State<BudgetData> {
+class _DataBudgetState extends State<BudgetRoute> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
